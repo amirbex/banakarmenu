@@ -64,7 +64,7 @@ async def handle_custom_prompt(update: Update, context: ContextTypes.DEFAULT_TYP
     taste = update.message.text
     context.user_data['taste'] = taste
     ingredient_list = ', '.join(ingredients)
-  prompt = f"""با توجه به طعم {taste} و فقط از بین مواد زیر، یک نوشیدنی بدون الکل طراحی کن. اسم جذاب، لیست مواد با مقدار، جمله تبلیغاتی، طرز تهیه حرفه‌ای بده.
+    prompt = f"""با توجه به طعم {taste} و فقط از بین مواد زیر، یک نوشیدنی بدون الکل طراحی کن. اسم جذاب، لیست مواد با مقدار، جمله تبلیغاتی، طرز تهیه حرفه‌ای بده.
 
 مواد:
 {ingredient_list}
