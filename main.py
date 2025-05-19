@@ -220,30 +220,6 @@ def main():
   },
 
   {
-    "Drink Name": "Caffè Mocha (Single Origin)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو همراه با سس شکلات و شیر و فوم شیر اندک، طعمی شکلاتی و ملایم",
-    "Ingredients": ["قهوه دپویو", "سس شکلات", "شیر", "فوم شیر"],
-    "Price": 159000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Caffè Mocha (Commercial)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو همراه با سس شکلات و شیر و فوم شیر اندک، طعمی ملایم‌تر و متعادل‌تر",
-    "Ingredients": ["قهوه دپویو", "سس شکلات", "شیر", "فوم شیر"],
-    "Price": 147000,
-    "Available": true
-  },
-{
-    "Drink Name": "Mont Parnasse",
-    "Category": "ماکتیل",
-    "Flavor Description": "ترکیب ترش میوه‌های قرمز با پس طعم شیرینی فندق",
-    "Ingredients": ["میوه‌های قرمز", "فندق"],
-    "Price": 147000,
-    "Available": true
-  },
-  {
     "Drink Name": "Emerald",
     "Category": "ماکتیل",
     "Flavor Description": "ترکیب میوه‌های ملس و تابستانه با پس طعم تلخی پرتقال",
