@@ -70,17 +70,15 @@ async def handle_custom_prompt(update: Update, context: ContextTypes.DEFAULT_TYP
 {ingredient_list}
 """
 
-
     thinking_msg = await send_typing_thinking(update)
-try:
-    response = await model.generate_content(prompt)  # با await
-    result = response.candidates[0].content.parts[0].text
-    await thinking_msg.delete()
-    await send_chunked_text(result, update)
-except Exception as e:
-    await thinking_msg.delete()
-    await update.message.reply_text(f"متأسفم، مشکلی در دریافت پاسخ از Gemini پیش اومد: {e}")
-
+    try:
+        response = await model.generate_content(prompt)  # استفاده از await داخل تابع async
+        result = response.candidates[0].content.parts[0].text
+        await thinking_msg.delete()
+        await send_chunked_text(result, update)
+    except Exception as e:
+        await thinking_msg.delete()
+        await update.message.reply_text(f"متأسفم، مشکلی در دریافت پاسخ از Gemini پیش اومد: {e}")
 
 # --- مسیر پیشنهاد منو ---
 async def handle_menu_intro(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -89,17 +87,17 @@ async def handle_menu_intro(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def handle_menu_search(update: Update, context: ContextTypes.DEFAULT_TYPE):
     request = update.message.text
-    # پرامپت مشخص برای مسیر منو
     prompt = f"کاربر دنبال نوشیدنی با این مشخصاته: {request}\nبا توجه به لیست منو زیر، فقط اسم و ویژگی آیتم‌های مناسب رو بگو:\n" + '\n'.join([f"- {item['Drink Name']} ({item['Flavor Description']})" for item in sample_menu])
     thinking_msg = await send_typing_thinking(update)
     try:
-        response = model.generate_content(prompt)
+        response = model.generate_content(prompt)  # اگر Gemini async است، این خط را به await تغییر بده
         result = response.candidates[0].content.parts[0].text
         await thinking_msg.delete()
         await send_chunked_text(result, update)
-    except:
+    except Exception as e:
         await thinking_msg.delete()
-        await update.message.reply_text("متأسفم، نتونستم پیشنهادی از منو پیدا کنم.")
+        await update.message.reply_text(f"متأسفم، نتونستم پیشنهادی از منو پیدا کنم: {e}")
+
 
 # --- هدایت مکالمه بر اساس مسیر جاری ---
 async def dynamic_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
