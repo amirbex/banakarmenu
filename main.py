@@ -234,7 +234,7 @@ def main():
     "Ingredients": ["قهوه دپویو", "سس شکلات", "شیر", "فوم شیر"],
     "Price": 147000,
     "Available": true
-  }
+  },
 {
     "Drink Name": "Mont Parnasse",
     "Category": "ماکتیل",
