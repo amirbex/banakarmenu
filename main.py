@@ -72,14 +72,15 @@ async def handle_custom_prompt(update: Update, context: ContextTypes.DEFAULT_TYP
 
 
     thinking_msg = await send_typing_thinking(update)
-    try:
-        response = model.generate_content(prompt)
-        result = response.candidates[0].content.parts[0].text
-        await thinking_msg.delete()
-        await send_chunked_text(result, update)
-    except:
-        await thinking_msg.delete()
-        await update.message.reply_text("متأسفم، مشکلی در دریافت پاسخ از Gemini پیش اومد.")
+try:
+    response = await model.generate_content(prompt)  # با await
+    result = response.candidates[0].content.parts[0].text
+    await thinking_msg.delete()
+    await send_chunked_text(result, update)
+except Exception as e:
+    await thinking_msg.delete()
+    await update.message.reply_text(f"متأسفم، مشکلی در دریافت پاسخ از Gemini پیش اومد: {e}")
+
 
 # --- مسیر پیشنهاد منو ---
 async def handle_menu_intro(update: Update, context: ContextTypes.DEFAULT_TYPE):
