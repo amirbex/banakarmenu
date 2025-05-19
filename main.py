@@ -115,7 +115,7 @@ async def dynamic_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
 # --- اجرای اصلی ---
-async def main():
+def main():
     global sample_menu
     sample_menu = [
         {"Drink Name": "Iced Americano", "Flavor Description": "تلخ، خنک، انرژی‌بخش"},
@@ -128,7 +128,8 @@ async def main():
     app.add_handler(MessageHandler(filters.Regex("^🥼 نوشیدنی ابداعی$"), custom_drink_entry))
     app.add_handler(MessageHandler(filters.Regex("^📋 راهنمای منو$"), handle_menu_intro))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, dynamic_handler))
-    await app.run_polling()
+    
+    app.run_polling()
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    main()
