@@ -10,7 +10,7 @@ import google.generativeai as genai
 
 # --- کلیدهای API ---
 TELEGRAM_TOKEN = '8038668469:AAF8rEHamunjBCt-I2e5rCOa7JF25N94s2U'
-GOOGLE_API_KEY = 'AIzaSyDOwvn30o1OdXf2KFxZPkYwXSqBqerpQ3A'
+GOOGLE_API_KEY = 'AIzaSyC8VK_y5ESVLZNXI80wy7KBJ5_IxEoxh7E'
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel(model_name="models/gemini-1.5-pro")
 
