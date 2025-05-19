@@ -117,197 +117,169 @@ async def dynamic_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     global sample_menu
     sample_menu = [
-  {
-    "Drink Name": "Doppio (Single Origin)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه عصاره گیری شده تحت فشار، طعم قوی و خالص",
-    "Ingredients": ["قهوه عصاره گیری شده"],
-    "Price": 141000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Doppio (Commercial)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه عصاره گیری شده تحت فشار، طعمی متعادل‌تر و ملایم‌تر",
-    "Ingredients": ["قهوه عصاره گیری شده"],
-    "Price": 128000,
-    "Available": true
-  },
-
-  {
-    "Drink Name": "Americano (Single Origin)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو با مقدار دلخواه آب، طعمی قوی و تلخ",
-    "Ingredients": ["قهوه دپویو", "آب"],
-    "Price": 141000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Americano (Commercial)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو با مقدار دلخواه آب، طعمی ملایم‌تر و متعادل‌تر",
-    "Ingredients": ["قهوه دپویو", "آب"],
-    "Price": 128000,
-    "Available": true
-  },
-
-  {
-    "Drink Name": "Cappuccino (Single Origin)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو همراه با شیر و فوم شیر حجیم، طعمی غنی و کرمی",
-    "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
-    "Price": 150000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Cappuccino (Commercial)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو همراه با شیر و فوم شیر، طعمی ملایم‌تر و متعادل‌تر",
-    "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
-    "Price": 137000,
-    "Available": true
-  },
-
-  {
-    "Drink Name": "Caffè Latte (Single Origin)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو همراه با شیر و فوم شیر اندک، طعمی ملایم و کرمی",
-    "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
-    "Price": 152000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Caffè Latte (Commercial)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو همراه با شیر و فوم شیر اندک، طعمی متعادل‌تر",
-    "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
-    "Price": 139000,
-    "Available": true
-  },
-
-  {
-    "Drink Name": "Affogato (Single Origin)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو همراه با دو اسکوپ بستنی وانیلی، طعمی شیرین و دلچسب",
-    "Ingredients": ["قهوه دپویو", "بستنی وانیلی"],
-    "Price": 154000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Affogato (Commercial)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو همراه با دو اسکوپ بستنی وانیلی، طعمی ملایم‌تر و شیرین",
-    "Ingredients": ["قهوه دپویو", "بستنی وانیلی"],
-    "Price": 141000,
-    "Available": true
-  },
-
-  {
-    "Drink Name": "Caffè Macchiato (Single Origin)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو همراه با شیر و فوم اندک، طعمی قوی و صاف",
-    "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
-    "Price": 148000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Caffè Macchiato (Commercial)",
-    "Category": "نوشیدنی بر پایه اسپرسو",
-    "Flavor Description": "قهوه دپویو همراه با شیر و فوم اندک، طعمی ملایم‌تر و صاف",
-    "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
-    "Price": 135000,
-    "Available": true
-  },
-
-  {
-    "Drink Name": "Emerald",
-    "Category": "ماکتیل",
-    "Flavor Description": "ترکیب میوه‌های ملس و تابستانه با پس طعم تلخی پرتقال",
-    "Ingredients": ["میوه‌های ملس", "تابستانه", "پرتقال"],
-    "Price": 143000,
-    "Available": true
-  },
-  {
-    "Drink Name": "GummyCandy",
-    "Category": "ماکتیل",
-    "Flavor Description": "ترکیب ترش و شیرین میوه‌های استوایی با پس طعم پاستیلی",
-    "Ingredients": ["میوه‌های استوایی"],
-    "Price": 141000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Vin De Miel",
-    "Category": "ماکتیل",
-    "Flavor Description": "ترکیب مرکبات و انگور با پس طعم شهد عسل و چای ترش دست‌ساز",
-    "Ingredients": ["مرکبات", "انگور", "شهد عسل", "چای ترش"],
-    "Price": 139000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Lilin",
-    "Category": "ماکتیل",
-    "Flavor Description": "ترکیب ترش و شیرین میوه‌های قرمز با چاشنی نمک",
-    "Ingredients": ["میوه‌های قرمز", "نمک"],
-    "Price": 139000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Le Ventos",
-    "Category": "ماکتیل",
-    "Flavor Description": "ترکیب میوه‌های قرمز و مرکبات با هم آمیزی شهد صیفی جات دست‌ساز",
-    "Ingredients": ["میوه‌های قرمز", "مرکبات", "شهد صیفی جات"],
-    "Price": 131000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Charlotte",
-    "Category": "ماکتیل",
-    "Flavor Description": "ترکیب میوه‌های استوایی با هم آمیزی انار و ذغال اخته",
-    "Ingredients": ["میوه‌های استوایی", "انار", "ذغال اخته"],
-    "Price": 137000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Eté cool",
-    "Category": "ماکتیل",
-    "Flavor Description": "ترکیب بهشتی و خنک میوه‌های گرمسیری با پس طعم نعنا و لیمو",
-    "Ingredients": ["میوه‌های گرمسیری", "نعنا", "لیمو"],
-    "Price": 133000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Grenouille",
-    "Category": "ماکتیل",
-    "Flavor Description": "ترکیب سرحال کننده مرکبات و آلوها با مکمل انرژی زا",
-    "Ingredients": ["مرکبات", "آلو", "مکمل انرژی زا"],
-    "Price": 143000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Denis",
-    "Category": "ماکتیل",
-    "Flavor Description": "ترکیب سیب و پرتقال با چاشنی شهد زنجبیل دست‌ساز اسپایسی",
-    "Ingredients": ["سیب", "پرتقال", "شهد زنجبیل"],
-    "Price": 133000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Orange Cool up",
-    "Category": "ماکتیل",
-    "Flavor Description": "آب پرتقال طبیعی",
-    "Ingredients": ["آب پرتقال"],
-    "Price": 117000,
-    "Available": true
-  },
-  {
-    "Drink Name": "Red Cool up",
-    "Category": "ماکتیل",
-    "Flavor Description": "آب هندوانه طبیعی",
-    "Ingredients": ["آب هندوانه"],
-    "Price": 87000,
-    "Available": true
-  }
+    {
+        "Drink Name": "Doppio (Single Origin)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه عصاره گیری شده تحت فشار، طعم قوی و خالص",
+        "Ingredients": ["قهوه عصاره گیری شده"],
+        "Price": 141000,
+    },
+    {
+        "Drink Name": "Doppio (Commercial)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه عصاره گیری شده تحت فشار، طعمی متعادل‌تر و ملایم‌تر",
+        "Ingredients": ["قهوه عصاره گیری شده"],
+        "Price": 128000,
+    },
+    {
+        "Drink Name": "Americano (Single Origin)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه دپویو با مقدار دلخواه آب، طعمی قوی و تلخ",
+        "Ingredients": ["قهوه دپویو", "آب"],
+        "Price": 141000,
+    },
+    {
+        "Drink Name": "Americano (Commercial)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه دپویو با مقدار دلخواه آب، طعمی ملایم‌تر و متعادل‌تر",
+        "Ingredients": ["قهوه دپویو", "آب"],
+        "Price": 128000,
+    },
+    {
+        "Drink Name": "Cappuccino (Single Origin)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه دپویو همراه با شیر و فوم شیر حجیم، طعمی غنی و کرمی",
+        "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
+        "Price": 150000,
+    },
+    {
+        "Drink Name": "Cappuccino (Commercial)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه دپویو همراه با شیر و فوم شیر، طعمی ملایم‌تر و متعادل‌تر",
+        "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
+        "Price": 137000,
+    },
+    {
+        "Drink Name": "Caffè Latte (Single Origin)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه دپویو همراه با شیر و فوم شیر اندک، طعمی ملایم و کرمی",
+        "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
+        "Price": 152000,
+    },
+    {
+        "Drink Name": "Caffè Latte (Commercial)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه دپویو همراه با شیر و فوم شیر اندک، طعمی متعادل‌تر",
+        "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
+        "Price": 139000,
+    },
+    {
+        "Drink Name": "Affogato (Single Origin)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه دپویو همراه با دو اسکوپ بستنی وانیلی، طعمی شیرین و دلچسب",
+        "Ingredients": ["قهوه دپویو", "بستنی وانیلی"],
+        "Price": 154000,
+    },
+    {
+        "Drink Name": "Affogato (Commercial)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه دپویو همراه با دو اسکوپ بستنی وانیلی، طعمی ملایم‌تر و شیرین",
+        "Ingredients": ["قهوه دپویو", "بستنی وانیلی"],
+        "Price": 141000,
+    },
+    {
+        "Drink Name": "Caffè Macchiato (Single Origin)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه دپویو همراه با شیر و فوم اندک، طعمی قوی و صاف",
+        "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
+        "Price": 148000,
+    },
+    {
+        "Drink Name": "Caffè Macchiato (Commercial)",
+        "Category": "نوشیدنی بر پایه اسپرسو",
+        "Flavor Description": "قهوه دپویو همراه با شیر و فوم اندک، طعمی ملایم‌تر و صاف",
+        "Ingredients": ["قهوه دپویو", "شیر", "فوم شیر"],
+        "Price": 135000,
+    },
+    {
+        "Drink Name": "Emerald",
+        "Category": "ماکتیل",
+        "Flavor Description": "ترکیب میوه‌های ملس و تابستانه با پس طعم تلخی پرتقال",
+        "Ingredients": ["میوه‌های ملس", "تابستانه", "پرتقال"],
+        "Price": 143000,
+    },
+    {
+        "Drink Name": "GummyCandy",
+        "Category": "ماکتیل",
+        "Flavor Description": "ترکیب ترش و شیرین میوه‌های استوایی با پس طعم پاستیلی",
+        "Ingredients": ["میوه‌های استوایی"],
+        "Price": 141000,
+    },
+    {
+        "Drink Name": "Vin De Miel",
+        "Category": "ماکتیل",
+        "Flavor Description": "ترکیب مرکبات و انگور با پس طعم شهد عسل و چای ترش دست‌ساز",
+        "Ingredients": ["مرکبات", "انگور", "شهد عسل", "چای ترش"],
+        "Price": 139000,
+    },
+    {
+        "Drink Name": "Lilin",
+        "Category": "ماکتیل",
+        "Flavor Description": "ترکیب ترش و شیرین میوه‌های قرمز با چاشنی نمک",
+        "Ingredients": ["میوه‌های قرمز", "نمک"],
+        "Price": 139000,
+    },
+    {
+        "Drink Name": "Le Ventos",
+        "Category": "ماکتیل",
+        "Flavor Description": "ترکیب میوه‌های قرمز و مرکبات با هم آمیزی شهد صیفی جات دست‌ساز",
+        "Ingredients": ["میوه‌های قرمز", "مرکبات", "شهد صیفی جات"],
+        "Price": 131000,
+    },
+    {
+        "Drink Name": "Charlotte",
+        "Category": "ماکتیل",
+        "Flavor Description": "ترکیب میوه‌های استوایی با هم آمیزی انار و ذغال اخته",
+        "Ingredients": ["میوه‌های استوایی", "انار", "ذغال اخته"],
+        "Price": 137000,
+    },
+    {
+        "Drink Name": "Eté cool",
+        "Category": "ماکتیل",
+        "Flavor Description": "ترکیب بهشتی و خنک میوه‌های گرمسیری با پس طعم نعنا و لیمو",
+        "Ingredients": ["میوه‌های گرمسیری", "نعنا", "لیمو"],
+        "Price": 133000,
+    },
+    {
+        "Drink Name": "Grenouille",
+        "Category": "ماکتیل",
+        "Flavor Description": "ترکیب سرحال کننده مرکبات و آلوها با مکمل انرژی زا",
+        "Ingredients": ["مرکبات", "آلو", "مکمل انرژی زا"],
+        "Price": 143000,
+    },
+    {
+        "Drink Name": "Denis",
+        "Category": "ماکتیل",
+        "Flavor Description": "ترکیب سیب و پرتقال با چاشنی شهد زنجبیل دست‌ساز اسپایسی",
+        "Ingredients": ["سیب", "پرتقال", "شهد زنجبیل"],
+        "Price": 133000,
+    },
+    {
+        "Drink Name": "Orange Cool up",
+        "Category": "ماکتیل",
+        "Flavor Description": "آب پرتقال طبیعی",
+        "Ingredients": ["آب پرتقال"],
+        "Price": 117000,
+    },
+    {
+        "Drink Name": "Red Cool up",
+        "Category": "ماکتیل",
+        "Flavor Description": "آب هندوانه طبیعی",
+        "Ingredients": ["آب هندوانه"],
+        "Price": 87000,
+    }
 ]
+
 
 
 
