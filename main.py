@@ -87,16 +87,30 @@ async def handle_menu_intro(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def handle_menu_search(update: Update, context: ContextTypes.DEFAULT_TYPE):
     request = update.message.text
-    prompt = f"کاربر دنبال نوشیدنی با این مشخصاته: {request}\nبا توجه به لیست منو زیر، فقط اسم و ویژگی آیتم‌های مناسب رو بگو:\n" + '\n'.join([f"- {item['Drink Name']} ({item['Flavor Description']})" for item in sample_menu])
-    thinking_msg = await send_typing_thinking(update)
-    try:
-        response = model.generate_content(prompt)  # اگر Gemini async است، این خط را به await تغییر بده
-        result = response.candidates[0].content.parts[0].text
-        await thinking_msg.delete()
-        await send_chunked_text(result, update)
-    except Exception as e:
-        await thinking_msg.delete()
-        await update.message.reply_text(f"متأسفم، نتونستم پیشنهادی از منو پیدا کنم: {e}")
+    user_name = update.effective_user.first_name  # نام کاربر را بگیر
+
+    # پیشنهادات بر اساس درخواست کاربر
+    suggestions = []  # نوشیدنی‌هایی که با درخواست کاربر همخوانی دارند
+    for item in sample_menu:
+        if item['Flavor Description'] in request:
+            suggestions.append(item)
+
+    if len(suggestions) == 0:
+        await update.message.reply_text(f"{user_name} عزیز، متاسفم! نوشیدنی مناسبی برای درخواست شما پیدا نکردم. می‌خواهید درخواست خاصی بدید؟")
+
+    else:
+        response_text = f"{user_name} عزیز، با توجه به درخواستت، فکر می‌کنم این گزینه‌ها مناسب باشن:\n\n"
+        for item in suggestions[:2]:  # حداکثر 2 نوشیدنی به کاربر پیشنهاد داده می‌شود
+            response_text += f"🍹 {item['Drink Name']}:\n"
+            response_text += f"  طعم: {item['Flavor Description']}\n"
+            response_text += f"  قیمت: {item['Price']} تومان\n\n"
+
+        # اگر گزینه‌های بیشتری داریم
+        if len(suggestions) > 2:
+            response_text += "اگر نیاز به پیشنهادات بیشتری داری، فقط بگو!"
+
+        await update.message.reply_text(response_text)
+
 
 
 # --- هدایت مکالمه بر اساس مسیر جاری ---
