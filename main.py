@@ -89,27 +89,72 @@ async def handle_menu_search(update: Update, context: ContextTypes.DEFAULT_TYPE)
     request = update.message.text
     user_name = update.effective_user.first_name  # نام کاربر را بگیر
 
-    # پیشنهادات بر اساس درخواست کاربر
-    suggestions = []  # نوشیدنی‌هایی که با درخواست کاربر همخوانی دارند
+    # جستجو در دسته‌بندی‌ها
+    drinks = []
+    desserts = []
+    foods = []
+
+
+# --- مسیر پیشنهاد منو ---
+async def handle_menu_intro(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    context.user_data['flow'] = 'menu'
+    await update.message.reply_text("چه طعمی، حسی یا سبک نوشیدنی مدنظرت هست؟ مثلاً شیرین، ترش، خنک یا کلاسیک؟")
+
+async def handle_menu_search(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    request = update.message.text
+    user_name = update.effective_user.first_name  # نام کاربر را بگیر
+
+    # جستجو در دسته‌بندی‌ها
+    drinks = []
+    desserts = []
+    foods = []
+
+    # پردازش درخواست کاربر برای پیدا کردن نوشیدنی‌ها، دسرها و غذاها
     for item in sample_menu:
-        if item['Flavor Description'] in request:
-            suggestions.append(item)
+        if 'نوشیدنی' in item['Category'] and any(keyword in item['Flavor Description'] for keyword in request.split()):
+            drinks.append(item)
+        elif 'دسر' in item['Category'] and any(keyword in item['Flavor Description'] for keyword in request.split()):
+            desserts.append(item)
+        elif 'غذا' in item['Category'] and any(keyword in item['Flavor Description'] for keyword in request.split()):
+            foods.append(item)
 
-    if len(suggestions) == 0:
-        await update.message.reply_text(f"{user_name} عزیز، متاسفم! نوشیدنی مناسبی برای درخواست شما پیدا نکردم. می‌خواهید درخواست خاصی بدید؟")
-
+    # اگر هیچ گزینه‌ای پیدا نکردیم
+    if len(drinks) == 0 and len(desserts) == 0 and len(foods) == 0:
+        await update.message.reply_text(f"{user_name} عزیز، متاسفم! نوشیدنی یا دسر مناسب برای درخواست شما پیدا نکردم. می‌خواهید درخواست خاصی بدید؟")
     else:
+        # پاسخ به کاربر با دسته‌بندی‌های مختلف
         response_text = f"{user_name} عزیز، با توجه به درخواستت، فکر می‌کنم این گزینه‌ها مناسب باشن:\n\n"
-        for item in suggestions[:2]:  # حداکثر 2 نوشیدنی به کاربر پیشنهاد داده می‌شود
-            response_text += f"🍹 {item['Drink Name']}:\n"
-            response_text += f"  طعم: {item['Flavor Description']}\n"
-            response_text += f"  قیمت: {item['Price']} تومان\n\n"
+        
+        # نوشیدنی‌ها
+        if len(drinks) > 0:
+            response_text += "🍹 **نوشیدنی‌ها**:\n"
+            for item in drinks[:2]:  # حداکثر 2 نوشیدنی به کاربر پیشنهاد داده می‌شود
+                response_text += f"**{item['Drink Name']}**: {item['Flavor Description']}\n"
+                response_text += f"   قیمت: {item['Price']} تومان\n"
+                response_text += f"   مواد تشکیل‌دهنده: {', '.join(item['Ingredients'])}\n\n"
+
+        # دسرها
+        if len(desserts) > 0:
+            response_text += "🍰 **دسرها**:\n"
+            for item in desserts[:2]:  # حداکثر 2 دسر به کاربر پیشنهاد داده می‌شود
+                response_text += f"**{item['Drink Name']}**: {item['Flavor Description']}\n"
+                response_text += f"   قیمت: {item['Price']} تومان\n"
+                response_text += f"   مواد تشکیل‌دهنده: {', '.join(item['Ingredients'])}\n\n"
+
+        # غذاها
+        if len(foods) > 0:
+            response_text += "🍽 **غذاها**:\n"
+            for item in foods[:2]:  # حداکثر 2 غذا به کاربر پیشنهاد داده می‌شود
+                response_text += f"**{item['Drink Name']}**: {item['Flavor Description']}\n"
+                response_text += f"   قیمت: {item['Price']} تومان\n"
+                response_text += f"   مواد تشکیل‌دهنده: {', '.join(item['Ingredients'])}\n\n"
 
         # اگر گزینه‌های بیشتری داریم
-        if len(suggestions) > 2:
+        if len(drinks) + len(desserts) + len(foods) > 2:
             response_text += "اگر نیاز به پیشنهادات بیشتری داری، فقط بگو!"
 
         await update.message.reply_text(response_text)
+
 
 
 
