@@ -277,8 +277,8 @@ def main():
         "Flavor Description": "شیرین و کرمی با رایحه کارامل و چای",
         "Ingredients": ["عصاره چای", "کارامل", "شیر"],
         "Price": 156000
-    }
- {
+    },
+    {
         "Drink Name": "Iced Matcha Latte",
         "Category": "ماچا",
         "Flavor Description": "ملایم، گیاهی، شیرین با حس خنکی یخ",
@@ -396,9 +396,8 @@ def main():
         "Flavor Description": "خنک، ضدسرفه و لیمویی با عطر رزماری",
         "Ingredients": ["به", "لیمو", "ارگانو", "رزماری"],
         "Price": 143000
-    }
-
-{
+    },
+    {
         "Drink Name": "Saint-Honoré Tart",
         "Category": "دسر",
         "Flavor Description": "کرم‌دار، کره‌ای، بادامی با شیرینی کاراملی لطیف",
@@ -544,9 +543,8 @@ def main():
         "Flavor Description": "شیرین، میوه‌ای، با بافت یخی و طعم آلبالو",
         "Ingredients": ["توت فرنگی", "آلبالو", "ماست"],
         "Price": 178000
-    }
-
-{
+    },
+    {
         "Drink Name": "Bacon Baguette",
         "Category": "باگت",
         "Flavor Description": "دودی، گوشتی، قارچی با نان فرانسوی و سس لذیذ",
