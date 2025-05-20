@@ -202,6 +202,442 @@ def main():
         "Price": 135000,
     },
     {
+        "Drink Name": "Iced Americano",
+        "Category": "نوشیدنی های سرد",
+        "Flavor Description": "قهوه سرد و تلخ با طعمی خنک و شفاف",
+        "Ingredients": ["قهوه دپویو", "آب", "یخ"],
+        "Price": 0  # قیمت مشخص نیست
+    },
+    {
+        "Drink Name": "CocoMoco Frappe",
+        "Category": "نوشیدنی های سرد",
+        "Flavor Description": "طعم شیرین و شکلاتی با حس خامه‌ای و کمی قهوه‌ای",
+        "Ingredients": ["قهوه", "شیر نارگیل", "افزودنی طعم‌دهنده", "خامه حجیم شده"],
+        "Price": 177000
+    },
+    {
+        "Drink Name": "CreamNut Frappe",
+        "Category": "نوشیدنی های سرد",
+        "Flavor Description": "طعم فندقی شکلاتی با بافتی کرمی و غنی",
+        "Ingredients": ["قهوه", "شیر", "شکلات فندقی", "خامه حجیم شده"],
+        "Price": 185000
+    },
+    {
+        "Drink Name": "Single Origin Cold Brew",
+        "Category": "نوشیدنی های سرد",
+        "Flavor Description": "قهوه عصاره‌گیری شده با طعم ملایم، کمی شیرین، کم‌اسیدی",
+        "Ingredients": ["قهوه", "آب", "یخ"],
+        "Price": 161000
+    },
+    {
+        "Drink Name": "Iced Mocha",
+        "Category": "نوشیدنی های سرد",
+        "Flavor Description": "شکلاتی، شیرین و قوی با حس خنکی یخ",
+        "Ingredients": ["قهوه دپویو", "شیر", "سس شکلات", "یخ"],
+        "Price": 0  # قیمت مشخص نیست
+    },
+    {
+        "Drink Name": "Iced Latte",
+        "Category": "نوشیدنی های سرد",
+        "Flavor Description": "ملایم، شیرین و کرمی با حس خنکی دلپذیر",
+        "Ingredients": ["قهوه دپویو", "شیر", "یخ"],
+        "Price": 0  # قیمت مشخص نیست
+    },
+    {
+        "Drink Name": "Matchate",
+        "Category": "نوشیدنی های گرم",
+        "Flavor Description": "طعمی خاص از چای ماچا با ترکیب پسته و شکلات سفید، شیرین و گیاهی",
+        "Ingredients": ["ماچا", "پسته", "شکلات سفید", "شیر"],
+        "Price": 189000
+    },
+    {
+        "Drink Name": "Pink Chocolate",
+        "Category": "نوشیدنی های گرم",
+        "Flavor Description": "شیرین و توتی با رایحه شکلات سفید و بافت کرمی",
+        "Ingredients": ["توت فرنگی", "شکلات سفید", "شیر"],
+        "Price": 177000
+    },
+    {
+        "Drink Name": "Coco Chocolate",
+        "Category": "نوشیدنی های گرم",
+        "Flavor Description": "شکلاتی، کلاسیک و شیرین با شیر داغ",
+        "Ingredients": ["شکلات", "شیر"],
+        "Price": 169000
+    },
+    {
+        "Drink Name": "Ardental",
+        "Category": "نوشیدنی های گرم",
+        "Flavor Description": "تند، شیرین و ادویه‌دار، ترکیبی سنتی از ماسالا و جنسینگ",
+        "Ingredients": ["ماسالا", "جنسینگ", "خشخاش", "شیر"],
+        "Price": 185000
+    },
+    {
+        "Drink Name": "Tea Latte Caramel",
+        "Category": "نوشیدنی های گرم",
+        "Flavor Description": "شیرین و کرمی با رایحه کارامل و چای",
+        "Ingredients": ["عصاره چای", "کارامل", "شیر"],
+        "Price": 156000
+    }
+ {
+        "Drink Name": "Iced Matcha Latte",
+        "Category": "ماچا",
+        "Flavor Description": "ملایم، گیاهی، شیرین با حس خنکی یخ",
+        "Ingredients": ["ماچا", "شیر", "یخ"],
+        "Price": 197000
+    },
+    {
+        "Drink Name": "Matcha Latte",
+        "Category": "ماچا",
+        "Flavor Description": "گیاهی، گرم و کرمی با شیر داغ",
+        "Ingredients": ["ماچا", "شیر"],
+        "Price": 199000
+    },
+    {
+        "Drink Name": "Iced Matcha",
+        "Category": "ماچا",
+        "Flavor Description": "تلخ، خنک و گیاهی با ته‌مزه‌ی سبز تازه",
+        "Ingredients": ["ماچا", "یخ", "آب"],
+        "Price": 177000
+    },
+    {
+        "Drink Name": "Matcha",
+        "Category": "ماچا",
+        "Flavor Description": "طعم خالص و تلخ چای ماچا دم‌آوری شده",
+        "Ingredients": ["ماچا", "آب"],
+        "Price": 187000
+    },
+    {
+        "Drink Name": "Mango Matcha",
+        "Category": "ماچا",
+        "Flavor Description": "ترکیبی از شیرینی انبه با ماچا، شیرین و استوایی",
+        "Ingredients": ["ماچا", "سیروپ انبه"],
+        "Price": 207000
+    },
+    {
+        "Drink Name": "Matcha Shake",
+        "Category": "ماچا",
+        "Flavor Description": "خامه‌ای، شیرین و وانیلی با طعم سبز ماچا",
+        "Ingredients": ["ماچا", "بستنی وانیلی"],
+        "Price": 199000
+    },
+    {
+        "Drink Name": "MatchaGatto",
+        "Category": "ماچا",
+        "Flavor Description": "تلخ و شیرین با ترکیب بستنی و ماچا گرم",
+        "Ingredients": ["ماچا", "دو اسکوپ بستنی"],
+        "Price": 199000
+    },
+    {
+        "Drink Name": "Special Black Tea",
+        "Category": "دمنوش",
+        "Flavor Description": "کلاسیک، قوی، عطری با ته‌مزه بهاری",
+        "Ingredients": ["چای سیلان", "گل بهارنارنج"],
+        "Price": 79000
+    },
+    {
+        "Drink Name": "Helin",
+        "Category": "دمنوش",
+        "Flavor Description": "ملایم، گیاهی، کمی شیرین با طعم عسل",
+        "Ingredients": ["چای سیر چینی", "چاتمین", "میوه گرمسیری", "عسل"],
+        "Price": 141000
+    },
+    {
+        "Drink Name": "Gabriel",
+        "Category": "دمنوش",
+        "Flavor Description": "شیرین و معطر با ترکیب سیب، بابونه، دارچین و گل ستاره‌ای",
+        "Ingredients": ["سیب", "بابونه", "دارچین", "گل ستاره‌ای"],
+        "Price": 153000
+    },
+    {
+        "Drink Name": "Oten",
+        "Category": "دمنوش",
+        "Flavor Description": "میوه‌ای و تازه با طعم بهار نارنج و بادام",
+        "Ingredients": ["میوه قرمز", "بادام", "بهارنارنج"],
+        "Price": 163000
+    },
+    {
+        "Drink Name": "Énergisant",
+        "Category": "دمنوش",
+        "Flavor Description": "قوی، انرژی‌بخش، تند و ادویه‌دار",
+        "Ingredients": ["چای سیاه", "میخک", "هل", "زنجبیل", "دارچین"],
+        "Price": 164000
+    },
+    {
+        "Drink Name": "Landa",
+        "Category": "دمنوش",
+        "Flavor Description": "ملایم، آرامش‌بخش و گلی با رایحه هل و گل رز",
+        "Ingredients": ["لاوندر", "گل گاوزبان", "گل سرخ", "هل"],
+        "Price": 151000
+    },
+    {
+        "Drink Name": "Marseille",
+        "Category": "دمنوش",
+        "Flavor Description": "گلی، سنتی، شیرین با ترکیب چای فرانسوی و توت سفید",
+        "Ingredients": ["چای فرانسوی", "گل سرخ", "توت سفید"],
+        "Price": 147000
+    },
+    {
+        "Drink Name": "Rozelin",
+        "Category": "دمنوش",
+        "Flavor Description": "استوایی و ادویه‌ای با رایحه رز و زنجبیل",
+        "Ingredients": ["آناناس", "رز", "زنجبیل"],
+        "Price": 157000
+    },
+    {
+        "Drink Name": "Yerba Mate",
+        "Category": "دمنوش",
+        "Flavor Description": "گیاهی، تلخ و غلیظ با پس‌طعم نعناع و انرژی‌زا",
+        "Ingredients": ["یربا ماته", "نعناع"],
+        "Price": 147000
+    },
+    {
+        "Drink Name": "Anti-Froid",
+        "Category": "دمنوش",
+        "Flavor Description": "خنک، ضدسرفه و لیمویی با عطر رزماری",
+        "Ingredients": ["به", "لیمو", "ارگانو", "رزماری"],
+        "Price": 143000
+    }
+
+{
+        "Drink Name": "Saint-Honoré Tart",
+        "Category": "دسر",
+        "Flavor Description": "کرم‌دار، کره‌ای، بادامی با شیرینی کاراملی لطیف",
+        "Ingredients": ["خمیر سوفله بادام", "کرم دیپلمات", "کارامل"],
+        "Price": 149000
+    },
+    {
+        "Drink Name": "Chocolate Hazelnut Éclair",
+        "Category": "دسر",
+        "Flavor Description": "شکلاتی، فندقی و خامه‌ای با بافت لطیف",
+        "Ingredients": ["خمیر شو", "شکلات", "کرم موسلین", "پرالین فندق"],
+        "Price": 139000
+    },
+    {
+        "Drink Name": "Berries Éclair",
+        "Category": "دسر",
+        "Flavor Description": "توتی، شیرین و سبک با بافت خامه‌ای",
+        "Ingredients": ["خمیر شو", "توت فرنگی", "کرم"],
+        "Price": 142000
+    },
+    {
+        "Drink Name": "Pistache Éclair",
+        "Category": "دسر",
+        "Flavor Description": "پسته‌ای، خامه‌ای، شیرین با رایحه لطیف پسته",
+        "Ingredients": ["خمیر شو", "پسته", "کرم موسلین", "پرالین پسته"],
+        "Price": 159000
+    },
+    {
+        "Drink Name": "Cheesecake with Hazelnut Chocolate Topping",
+        "Category": "دسر",
+        "Flavor Description": "شکلاتی، پنیری و خامه‌ای با بیسکوئیت کره‌ای",
+        "Ingredients": ["بیسکوئیت", "پنیر", "شکلات", "فندق"],
+        "Price": 147000
+    },
+    {
+        "Drink Name": "Honey Cake",
+        "Category": "دسر",
+        "Flavor Description": "لایه‌ای، شیرین، عسلی با طعمی نرم و لطیف",
+        "Ingredients": ["عسل", "پنیر خامه‌ای", "پودر بیسکوئیت"],
+        "Price": 137000
+    },
+    {
+        "Drink Name": "Cheesecake",
+        "Category": "دسر",
+        "Flavor Description": "پنیری، ساده، سبک با پایه بیسکوئیت کره‌ای",
+        "Ingredients": ["بیسکوئیت", "پنیر", "خامه"],
+        "Price": 131000
+    },
+    {
+        "Drink Name": "Tres Leches Cake",
+        "Category": "دسر",
+        "Flavor Description": "کیک نرم و مرطوب با طعم شیر عسلی و شیر غلیظ",
+        "Ingredients": ["شیر عسلی", "شیر غلیظ", "خامه", "کیک"],
+        "Price": 127000
+    },
+    {
+        "Drink Name": "Cheesecake with Peanut Butter Topping",
+        "Category": "دسر",
+        "Flavor Description": "پنیری، کره بادام زمینی‌دار، شیرین و خامه‌ای",
+        "Ingredients": ["بیسکوئیت", "پنیر", "کره بادام زمینی"],
+        "Price": 147000
+    },
+    {
+        "Drink Name": "Cheesecake with Lotus Topping",
+        "Category": "دسر",
+        "Flavor Description": "پنیری، شیرین و کره‌ای با عطر بیسکویت لوتوس",
+        "Ingredients": ["بیسکوئیت", "پنیر", "لوتوس"],
+        "Price": 147000
+    },
+    {
+        "Drink Name": "Creamy Mushroom Soup",
+        "Category": "سوپ و سالاد",
+        "Flavor Description": "خامه‌ای، قارچی، لطیف و پنیر‌دار با تست قارچ کبابی",
+        "Ingredients": ["قارچ", "خامه", "پنیر گودا", "قارچ گریل شده"],
+        "Price": 187000
+    },
+    {
+        "Drink Name": "Shandy Salad",
+        "Category": "سوپ و سالاد",
+        "Flavor Description": "مزه‌دار، پروتئینی، ترش و خامه‌ای با سس دست‌ساز",
+        "Ingredients": ["مرغ مزه‌دار", "پنیر پارمسان", "کروتان", "سس رنچ", "کاهو", "گردو", "زیتون"],
+        "Price": 259000
+    },
+    {
+        "Drink Name": "Viande Salad",
+        "Category": "سوپ و سالاد",
+        "Flavor Description": "گوشت‌دار، مغذی و مدیترانه‌ای",
+        "Ingredients": ["فیله گوساله", "کاهو", "زیتون", "کوجه", "هویج"],
+        "Price": 293000
+    },
+    {
+        "Drink Name": "Pomodoro Pasta",
+        "Category": "پاستا",
+        "Flavor Description": "پنه ریگاته با سس گوجه پومودورو، پنیری و ترش و تازه",
+        "Ingredients": ["پنه", "سس گوجه پومودورو", "پنیر موزارلا", "ریحان"],
+        "Price": 0
+    },
+    {
+        "Drink Name": "Peanut Smoky Pasta",
+        "Category": "پاستا",
+        "Flavor Description": "کرم‌دار، دودی، مغذی و خاص با سس بادام زمینی",
+        "Ingredients": ["پنه", "سس بادام زمینی", "کدو", "قارچ", "پنیر"],
+        "Price": 0
+    },
+    {
+        "Drink Name": "Solaire Smoothie",
+        "Category": "شیک و اسموتی",
+        "Flavor Description": "پروتئینی، استوایی و پرانرژی با طعم انبه و پرتقال",
+        "Ingredients": ["پروتئین", "انبه", "پرتقال"],
+        "Price": 172000
+    },
+    {
+        "Drink Name": "Salé Sucré Shake",
+        "Category": "شیک و اسموتی",
+        "Flavor Description": "شیرین و شور با کرمی از بادام زمینی نمکی",
+        "Ingredients": ["شیر", "بادام زمینی"],
+        "Price": 179000
+    },
+    {
+        "Drink Name": "Butternut Shake",
+        "Category": "شیک و اسموتی",
+        "Flavor Description": "خامه‌ای، مغذی و پرملات با مغزها و شیر یخ‌زده",
+        "Ingredients": ["بستنی", "گردو", "فندق", "راده‌ی یخی"],
+        "Price": 187000
+    },
+    {
+        "Drink Name": "Inferno Smoothie",
+        "Category": "شیک و اسموتی",
+        "Flavor Description": "سیاه، شیرین و خاکی با چاشنی ماست و شلیل",
+        "Ingredients": ["شلیل", "نمک جنگلی", "ماست"],
+        "Price": 173000
+    },
+    {
+        "Drink Name": "Ete Rouge Smoothie",
+        "Category": "شیک و اسموتی",
+        "Flavor Description": "توتی، ترش و پرتقالی با رایحه تازه میوه‌ای",
+        "Ingredients": ["پرتقال", "توت فرنگی"],
+        "Price": 183000
+    },
+    {
+        "Drink Name": "Sang Sacré Smoothie",
+        "Category": "شیک و اسموتی",
+        "Flavor Description": "شیرین، میوه‌ای، با بافت یخی و طعم آلبالو",
+        "Ingredients": ["توت فرنگی", "آلبالو", "ماست"],
+        "Price": 178000
+    }
+
+{
+        "Drink Name": "Bacon Baguette",
+        "Category": "باگت",
+        "Flavor Description": "دودی، گوشتی، قارچی با نان فرانسوی و سس لذیذ",
+        "Ingredients": ["بیکن", "فیله گوشت", "قارچ", "کاهو", "گوجه خشک مزه‌دار", "نان باگت"],
+        "Price": 313000
+    },
+    {
+        "Drink Name": "Sausage Baguette",
+        "Category": "باگت",
+        "Flavor Description": "ادویه‌دار، گوشتی و خامه‌ای با سوسیس دست‌ساز",
+        "Ingredients": ["سوسیس دست‌ساز", "کاهو", "گوجه خشک", "پنیر گودا", "زیتون", "سس"],
+        "Price": 341000
+    },
+    {
+        "Drink Name": "Chicken Baguette",
+        "Category": "باگت",
+        "Flavor Description": "ملایم، مرغی، سبز با ترکیب اسفناج و بیبی اسفناج",
+        "Ingredients": ["مرغ مزه‌دار", "بیبی اسفناج", "کاهو", "گوجه خشک", "نان باگت"],
+        "Price": 293000
+    },
+    {
+        "Drink Name": "Steak Baguette",
+        "Category": "باگت",
+        "Flavor Description": "کامل، گوشتی، پنیر‌دار با قارچ گریل و سس خاص",
+        "Ingredients": ["فیله گوساله", "قارچ کاراملی", "کاهو", "گوجه خشک", "نان باگت"],
+        "Price": 467000
+    },
+    {
+        "Drink Name": "Mushroom Baguette",
+        "Category": "باگت",
+        "Flavor Description": "گیاهی، خامه‌ای با قارچ‌های اسفناجی و نان فرانسوی",
+        "Ingredients": ["میکس قارچ", "اسفناج", "کاهو", "گوجه خشک", "نان باگت"],
+        "Price": 254000
+    },
+    {
+        "Drink Name": "Enjoy Toast",
+        "Category": "صبحانه",
+        "Flavor Description": "ترش، گوشتی و کلاسیک با بیکن و سوسیس صبحانه",
+        "Ingredients": ["خمیر ترش", "سوسیس دست‌ساز", "پنیر لیته", "تخم مرغ", "تمرهندی", "کاهو"],
+        "Price": 319000
+    },
+    {
+        "Drink Name": "Bacon Toast",
+        "Category": "صبحانه",
+        "Flavor Description": "دودی و کره‌ای با بیکن و تخم مرغ اسکرمبل",
+        "Ingredients": ["خمیر ترش", "بیکن", "پنیر لیته", "تخم مرغ اسکرمبل", "کاهو"],
+        "Price": 287000
+    },
+    {
+        "Drink Name": "Charmont Omelette",
+        "Category": "صبحانه",
+        "Flavor Description": "کلاسیک، اروپایی، با سس پومودورو و ریحان",
+        "Ingredients": ["تخم مرغ", "سس پومودورو", "ریحان", "موتزارلا", "گوجه خشک"],
+        "Price": 215000
+    },
+    {
+        "Drink Name": "Oliva Omelette",
+        "Category": "صبحانه",
+        "Flavor Description": "تخم‌مرغی، زیتونی و مدیترانه‌ای با سبزیجات",
+        "Ingredients": ["تخم مرغ", "زیتون", "سس پومودورو", "رب انار", "گردو", "گوجه خشک"],
+        "Price": 228000
+    },
+    {
+        "Drink Name": "Spaghetti Pancake",
+        "Category": "صبحانه",
+        "Flavor Description": "شیرین و رشته‌ای با موز، عسل و تاپینگ توتی",
+        "Ingredients": ["پنکیک", "رشته", "موز", "عسل", "توت فرنگی", "بلوبری"],
+        "Price": 219000
+    },
+    {
+        "Drink Name": "PeanutButter Toast",
+        "Category": "صبحانه",
+        "Flavor Description": "کره‌ای، شیرین، مقوی با بافت خامه‌ای",
+        "Ingredients": ["خمیر ترش", "کره بادام زمینی", "عسل", "موز", "خامه"],
+        "Price": 199000
+    },
+    {
+        "Drink Name": "Spinach Toast",
+        "Category": "صبحانه",
+        "Flavor Description": "سبز، خامه‌ای با اسفناج و قارچ کاراملی",
+        "Ingredients": ["خمیر ترش", "تخم مرغ", "قارچ کاراملی", "اسفناج", "گوجه خشک"],
+        "Price": 254000
+    },
+    {
+        "Drink Name": "Stocky Toast",
+        "Category": "صبحانه",
+        "Flavor Description": "کامل، گوشت‌دار، با طعم کلاسیک و گرم",
+        "Ingredients": ["خمیر ترش", "فیله گوساله", "تخم مرغ", "نیمرو", "گوجه خشک"],
+        "Price": 378000
+    },   
+    {
         "Drink Name": "Emerald",
         "Category": "ماکتیل",
         "Flavor Description": "ترکیب میوه‌های ملس و تابستانه با پس طعم تلخی پرتقال",
